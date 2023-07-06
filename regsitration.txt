@@ -1,0 +1,38 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class RegistrationAutomation {
+    public static void main(String[] args) {
+        // Set the path of the ChromeDriver executable
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+
+        // Create a new instance of ChromeDriver
+        WebDriver driver = new ChromeDriver();
+
+        // Open the registration page
+        driver.get("https://member.lazada.com.ph/user/register?spm=a2o4l.home.header.d6.239eca18BS6tch");
+
+        // Locate and fill in the registration form fields
+        WebElement usernameField = driver.findElement(By.id("UserName"));
+        usernameField.sendKeys("TestUser123");
+
+        WebElement passwordField = driver.findElement(By.id("password"));
+        passwordField.sendKeys("P@ssw0rd123");
+
+        WebElement phoneNumberField = driver.findElement(By.id("PhoneNumber"));
+        phoneNumberField.sendKeys("0123456789");
+
+        // Submit the registration form
+        WebElement registerButton = driver.findElement(By.id("RegisterSubmit"));
+        registerButton.click();
+
+        // Wait for registration confirmation or check for any error messages
+        // You can add appropriate wait conditions or assertions here to verify successful registration
+
+        // Close the web driver
+        driver.quit();
+    }
+}
+
