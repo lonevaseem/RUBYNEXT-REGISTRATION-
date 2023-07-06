@@ -1,0 +1,21 @@
+1 Robotframework- have not worked on this 
+-gherkin- Gherkin is a set of grammar rules that makes plain text structured enough for Cucumber to understand
+
+Case1- 
+driver.findelement(By.xpath,"//*[@id="container"]/div/div[2]/div/div[1]/div[4]/div[1]"),
+driver.findelement(Cssselector,["#class="mod-login-birthday clearfix"])),
+
+
+Case 2 -
+WebDriver driver = new ChromeDriver();
+WebDriver driver = new FirefoxDriver();
+
+Case 3 
+
+public void demoClass(String username, String password) throws InterruptedException {
+System.setProperty("webdriver.chrome.driver");
+Webdriver driver = new ChromeDriver();
+driver.get("https://member.lazada.com.ph/user/register?spm=a2o4l.home.header.d6.239eca18BS6tch");
+driver.findElement(By.name("user[login]")).sendKeys(username);
+driver.findElement(By.name("user[password]")).sendKeys(password);
+driver.findElement(By.name("commit")).click();
